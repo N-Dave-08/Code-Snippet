@@ -1,22 +1,15 @@
-function getSum(...numbers) {
-    let total = 0;
-    for( let number of numbers) {
-        total += number;
+class Product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
     }
 
-    return total;
-}
-
-
-function getAvg(...numbers) {
-    let total = 0;
-    for( let number of numbers) {
-        total += number;
+    showProduct() {
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: ${this.price}`)
     }
-
-    return total / numbers.length;
 }
 
-const result = getAvg(1, 2, 3, 4);
+const product1 = new Product("apple", 19);
 
-console.log(result);
+product1.showProduct();
